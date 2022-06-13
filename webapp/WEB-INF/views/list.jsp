@@ -19,7 +19,7 @@
 	<c:forEach items="${requestScope.personList}" var="personVo">
 		<table border="1">
 			<tr>
-				<td>이름(name)</td>
+				<td>이름(name)${personVo.personId}</td>
 				<td>${personVo.name}</td>
 			</tr>
 			<tr>
@@ -31,8 +31,9 @@
 				<td>${personVo.company}</td>
 			</tr>
 			<tr>
-				<td><a href="">[수정폼]</a></td>
-				<td><a href="">[삭제]</a></td>
+				<td><a href="modifyForm/${personVo.personId}">[수정폼]</a></td>
+				<td><a href="delete/${personVo.personId}">[삭제]</a></td>
+				<!-- 위와 같음 <a href="/phonebook3/delete?no=${personVo.personId}">[삭제] -->
 			</tr>
 
 		</table>
