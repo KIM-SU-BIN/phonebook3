@@ -1,5 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
 <!DOCTYPE html>
@@ -15,7 +14,7 @@
 	<h2>리스트</h2>
 
 	<p>입력한 정보 내용입니다</p>
-	
+
 	<c:forEach items="${requestScope.personList}" var="personVo">
 		<table border="1">
 			<tr>
@@ -38,6 +37,7 @@
 
 		</table>
 	</c:forEach>
+	<a href="./writeForm">전화번호등록</a>
 
 </body>
 </html>
